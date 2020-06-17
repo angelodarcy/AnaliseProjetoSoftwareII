@@ -1,12 +1,21 @@
 package com.exemploangelo.exemploangelo.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.io.Serializable;
 import java.util.Objects;
 
+@Entity //Segunda Versão Quando for criar o banco
 public class Categoria implements Serializable {
 
     // Criar os Atributos Básicos
+    @Id //Segunda Versão, Quando for criar o Banco
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //Segunda Versão, Quando for criar o Banco
     private Integer id;
+
+
     private String nome;
 
     // Associações
